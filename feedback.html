@@ -1,0 +1,51 @@
+<!Document html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback</title>
+        <style>
+            body{
+                font-family: VerizonNHGeDS-Regular;
+                padding: 20px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            input{
+                display: block;
+                margin: 10px 0;
+                padding: 10px;
+                width: 250px;
+            }
+            button{
+                padding: 10px;
+                background-color: #000000;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="input1">Username: </label>
+            <input type="text" id="input1" name="username" required>
+
+            <label for="input2">Company: </label>
+            <input type="text" id="input2" name="company" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            document.getElementById('feedbackForm').addEventListener('submit', function(e){
+                e.preventDefault();
+                const usernameInput = document.getElementById('input1').value;
+                const companyInput = document.getElementById('input2').value;
+
+                console.log("submit ", usernameInput, companyInput);
+            })
+        </script>
+    </body>
+</html>
